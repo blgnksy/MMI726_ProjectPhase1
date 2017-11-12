@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{long2015fully}
+J.~Long, E.~Shelhamer, and T.~Darrell, ``Fully convolutional networks for
+  semantic segmentation,'' in {\em Proceedings of the IEEE Conference on
+  Computer Vision and Pattern Recognition}, pp.~3431--3440, 2015.
+
+\bibitem{fadnavis2014image}
+S.~Fadnavis, ``Image interpolation techniques in digital image processing: An
+  overview,'' {\em International Journal of Engineering Research and
+  Applications}, vol.~4, no.~10, pp.~70--73, 2014.
+
+\bibitem{bilinear_img}
+``Bilinear interpolation.'' \url{https://www.giassa.net/?page_id=240}.
+
+\end{thebibliography}
