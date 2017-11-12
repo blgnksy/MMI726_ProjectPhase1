@@ -1,16 +1,5 @@
-\begin{block}{OpenCV CPU}
-\end{block}
-\begin{lstlisting}
-void  cv::resize (
-InputArray src, OutputArray dst, Size dsize, double fx=0, double fy=0, int interpolation=INTER_LINEAR
-)
+\begin{block}{Linux Command Line Tool - Imagemagick (CPU Only, OPENCL For Some Algorithms)}
+\begin{lstlisting}[language=bash]
+$ convert input.jpg output jpg -interpolate bilinear
 \end{lstlisting}
-
-\begin{block}{OpenCV GPU}
 \end{block}
-\begin{lstlisting}
-
-void cv::cuda::resize (
-InputArray  src, OutputArray  dst, Size  dsize, double  fx = 0, double  fy = 0, int  interpolation = INTER_LINEAR, Stream &  stream =Stream::Null()
-)
-\end{lstlisting}

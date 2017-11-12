@@ -13,4 +13,14 @@ S.~Fadnavis, ``Image interpolation techniques in digital image processing: An
 \bibitem{bilinear_img}
 ``Bilinear interpolation.'' \url{https://www.giassa.net/?page_id=240}.
 
+\bibitem{qingshuang2013parallel}
+W.~QINGSHUANG, W.~QIANG, and C.~XIANGFU, ``Parallel bilinear spatial
+  interpolation algorithm based on gpgpu.,'' {\em Journal of Theoretical \&
+  Applied Information Technology}, vol.~48, no.~3, 2013.
+
+\bibitem{akgun2013accelerating}
+T.~Akg{\"u}n and M.~Gevrekci, ``Accelerating super-resolution reconstruction
+  using gpu by cuda,'' in {\em Advances in Computational Science, Engineering
+  and Information Technology}, pp.~47--58, Springer, 2013.
+
 \end{thebibliography}

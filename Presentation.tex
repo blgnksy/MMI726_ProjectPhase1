@@ -19,8 +19,13 @@
 \usepackage{color}
 
 \lstset{frame=tb,
-  language=C,
   breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  commentstyle=\color{green}\ttfamily,
+  morecomment=[l][\color{magenta}]{\#}
 }
 
 \title[Applied Parallel Programming]{Bilinear Interpolation Upsampling on CUDA}
@@ -95,26 +100,55 @@
 			Y(J,K)=(1-W)(1-H)X(A,B)+(W)(1-H)X(A+1,B)+\\(1-W)(H)X(A,B+1)+(W)(H)X(A+1,B+1)
 		\end{multline}\vskip 4 cm
 	\end{frame}
+	%next slide
+	\begin{frame}
+		\begin{itemize}
+			\item dfsdfs\cite{qingshuang2013parallel}
+			\item\justifying Akgün and Gevrekci have been proposed "a massively multi-threaded implementation of super-resolution image formation on the NVIDIA CUDA architecture." \cite{akgun2013accelerating} "Super-resolution reconstruction begins with an initial estimate image which is typically chosen as a bilinearly upscaled version of the original low resolution frame."
+		\end{itemize}
+	\end{frame}
+	
 	%Next slide
 	\begin{frame}[fragile]
-	\begin{block}{OpenCV CPU}		
-	\end{block}
-		\begin{lstlisting}
-		void 	cv::resize (
-		InputArray src, OutputArray dst, Size dsize, double fx=0, double fy=0, int interpolation=INTER_LINEAR
-		)
-		\end{lstlisting}
-	
-		\begin{block}{OpenCV GPU}		
+		\begin{block}{OpenCV CPU}		
+		
+			\begin{lstlisting}[language=C]
+			void 	cv::resize (
+			InputArray src, OutputArray dst, Size dsize, double fx=0, double fy=0, int interpolation=INTER_LINEAR
+			)
+			\end{lstlisting}
 		\end{block}
-			\begin{lstlisting}
-			
+		\begin{block}{OpenCV GPU}		
+		
+			\begin{lstlisting}[language=C]
 			void cv::cuda::resize	(
-			InputArray 	src, OutputArray 	dst, Size 	dsize, double 	fx = 0, double 	fy = 0, int 	interpolation = INTER_LINEAR, Stream & 	stream =Stream::Null() 
+			InputArray src, OutputArray dst, Size dsize, double fx = 0, double fy = 0, int interpolation = INTER_LINEAR, Stream &stream=Stream::Null() 
 			)	
 			\end{lstlisting}
-		\end{frame}
+		\end{block}
+	\end{frame}
+	%Next slide
+	\begin{frame}[fragile]
+		\begin{block}{Intel Integrated Performance Primitives(CPU Optimizations)}
+			\begin{lstlisting}[language=C]
+				IppStatus ippiResizeLinear_<mod>(const Ipp<datatype>* pSrc, Ipp32s srcStep, Ipp<datatype>* pDst, Ipp32s dstStep, IppiPoint dstOffset, IppiSize dstSize, IppiBorderType border, const Ipp<datatype>* pBorderValue, const IppiResizeSpec_32f* pSpec, Ipp8u* pBuffer)
+			\end{lstlisting}
+		\end{block}
+		\begin{itemize}
+			\item Just for Intel CPU. Not free.(249\$for Academic Licence)
+			\item\justifying OpenCV 3.x has native support for IPP-ICV library which is a special subset of Intel IPP functions for image processing and computer vision.
+		\end{itemize}
+	\end{frame}
+	%Next slide
+	\begin{frame}[fragile]
+		\begin{block}{Linux Command Line Tool - Imagemagick (CPU Only, OPENCL For Some Algorithms)}
+			\begin{lstlisting}[language=bash]
+				$ convert input.jpg output jpg -interpolate bilinear
+			\end{lstlisting}
+		\end{block}
+	\end{frame}
 
+	
 %References
 \section{References}
 	%next slide

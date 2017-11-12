@@ -16,9 +16,16 @@
   year={2014}
 }
 
-
-@MISC{bilinear_img,
-    title = {Bilinear Interpolation},
-    note = {[Online; Accessed Novenber 11, 2017]},
-    url = {https://en.wikipedia.org/wiki/File:Atomic_force_microscope_block_diagram.svg}
+@misc{bilinear_img,
+  title = {Bilinear Interpolation},
+  howpublished = {\url{https://www.giassa.net/?page_id=240}}
 }
+@article{qingshuang2013parallel,
+  title={PARALLEL BILINEAR SPATIAL INTERPOLATION ALGORITHM BASED ON GPGPU.},
+  author={QINGSHUANG, WU and QIANG, WANG and XIANGFU, CHENG},
+  journal={Journal of Theoretical \& Applied Information Technology},
+  volume={48},
+  number={3},
+  year={2013}
+}
+
