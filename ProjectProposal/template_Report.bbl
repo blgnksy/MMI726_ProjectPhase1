@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{long2015fully}
+J.~Long, E.~Shelhamer, and T.~Darrell, ``Fully convolutional networks for
+  semantic segmentation,'' in {\em Proceedings of the IEEE Conference on
+  Computer Vision and Pattern Recognition}, pp.~3431--3440, 2015.
+
+\bibitem{fadnavis2014image}
+S.~Fadnavis, ``Image interpolation techniques in digital image processing: An
+  overview,'' {\em International Journal of Engineering Research and
+  Applications}, vol.~4, no.~10, pp.~70--73, 2014.
+
+\bibitem{bilinear_img}
+``Bilinear interpolation.'' \url{https://www.giassa.net/?page_id=240}.
+
+\bibitem{qingshuang2013parallel}
+W.~QINGSHUANG, W.~QIANG, and C.~XIANGFU, ``Parallel bilinear spatial
+  interpolation algorithm based on gpgpu.,'' {\em Journal of Theoretical \&
+  Applied Information Technology}, vol.~48, no.~3, 2013.
+
+\bibitem{akgun2013accelerating}
+T.~Akg{\"u}n and M.~Gevrekci, ``Accelerating super-resolution reconstruction
+  using gpu by cuda,'' in {\em Advances in Computational Science, Engineering
+  and Information Technology}, pp.~47--58, Springer, 2013.
+
+\end{thebibliography}
