@@ -1,5 +1,6 @@
-\begin{block}{Linux Command Line Tool - Imagemagick (CPU Only, OPENCL For Some Algorithms)}
+\frametitle{Literature Survey (cont'd)(Real Life Examples)}
+\begin{block}{Linux Command Line Tool - Imagemagick (CPU Only, OpenCL For Some Algorithms-No information avout Bilinear Upsampling)}
 \begin{lstlisting}[language=bash]
-$ convert input.jpg output jpg -interpolate bilinear
+$ convert input.jpg -scale 200% -interpolate bilinear output.jpg
 \end{lstlisting}
 \end{block}
